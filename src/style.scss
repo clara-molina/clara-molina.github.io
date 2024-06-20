@@ -1,10 +1,10 @@
 @use 'vars';
 
-$white: #FFE8E1;
-$nude: #FFCEBE;
+$white: #ffebe1;
+$nude: #f5d5b2;
 $light-peach: #FFB39B;
 $peach: #FF9A7A;
-$terracota: #DA6F4D;
+$terracota: #d95932;
 
 .container {
     background-color: $white;
@@ -12,51 +12,32 @@ $terracota: #DA6F4D;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: "Lato";
+    font-weight: 300;
+    color: $white;
 
-    section {
-       margin: 2em 0 2em 0; 
-    }
     .content-header {
         text-align: center;
+        margin: 3em auto;
 
-        .title {
+        .name {
             color: $terracota;
             font-size: 5em;
-            font-family: "Comforter Brush";
-            margin: auto;
-            text-align: center;
+            font-family: "Indie Flower";
         }
 
         .description {
-            color: $peach;
+            color: $light-peach;
+            font-family: "Press Start 2P";
         }
+    }
 
-        .nav {
-            width: 100%;
-            height: 2em;
-            background-color: $light-peach;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: auto;
+    main {
+        background-color: $white;
+    }
 
-            .left-link {
-                font-family: "Comforter";
-                font-size: 1.5em;
-                color: #211b19;
-                text-decoration: none;
-            }
-
-
-            .nav-link:hover,
-            .nav-link:focus {
-                transform: translateY(-4px);
-            }
-
-            .nav-active {
-                font-weight: bold;
-            }
-        }
+    section {
+        padding: 2em 0 2em 0;
     }
 
     .home-cv {
@@ -67,8 +48,7 @@ $terracota: #DA6F4D;
         margin-bottom: 2em;
 
         .home-photo {
-            height: 200px;
-            width: auto;
+            width: 30%;
             border-radius: 5px;
             margin-bottom: 1em;
         }
@@ -77,18 +57,18 @@ $terracota: #DA6F4D;
             display: flex;
             align-items: center;
             color: #211b19;
-            background-color: $peach;
+            background-color: $terracota;
             border-radius: 20px;
             padding: 0.5em;
             text-decoration: none;
-            box-shadow: 0px 0px 0px 2px $peach;
+            box-shadow: 0px 0px 0px 2px $terracota;
             transition: box-shadow 0.1s linear;
             margin: 0.5em;
             text-align: center;
         }
 
         .home-upload:hover {
-            box-shadow: 0px 0px 0px 10px $light-peach;
+            box-shadow: 0px 0px 0px 10px $nude;
         }
     }
 
@@ -101,15 +81,19 @@ $terracota: #DA6F4D;
 
     .title-section {
         font-size: 3em;
-        font-family: "Comforter";
-        color: $light-peach;
-        padding: 0.8em;
+        font-family: "Indie Flower";
+        color: $terracota;
+        padding-bottom: 0.8em;
     }
 
     .container-description {
-        color: $nude;
         font-size: 1.2em;
-        padding: 0 1.5em 2em;
+        padding: 0 4em;
+
+        .home-tp {
+            width: 50%;
+            margin-top: 2em;
+        }
     }
 
     .container-two {
@@ -123,24 +107,6 @@ $terracota: #DA6F4D;
             flex-direction: column;
         }
 
-        .link-projet {
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            color: #211b19;
-            background-color: $peach;
-            border-radius: 20px;
-            padding: 0.5em;
-            text-decoration: none;
-            box-shadow: 0px 0px 0px 2px $terracota;
-            transition: box-shadow 0.1s linear;
-            margin: 0 auto 2em;
-            text-align: center;
-        }
-
-        .link-projet:hover {
-            box-shadow: 0px 0px 0px 10px $terracota;
-        }
     }
 
     .container-one-list {
@@ -158,14 +124,16 @@ $terracota: #DA6F4D;
                 border-top: solid 1px $terracota;
 
                 .title-list {
-                    color: $terracota;
+                    color: $nude;
+                    font-family: "Press Start 2P";
+                    margin: 1em auto;
                 }
             }
         }
     }
 
     a {
-        color: $peach;
+        color: $nude;
         text-decoration: none;
     }
 
@@ -175,25 +143,47 @@ $terracota: #DA6F4D;
 
     .footer {
         background-color: $white;
+        color: black;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         height: 5em;
         width: 100%;
+
         .copyright {
-          margin: 0;
+            margin: 0;
         }
+
         .footer-link {
             color: #211b19;
         }
-      }
-    // @media screen and (min-width: 740px) {
-    //     .container {
-    //         .home-cv {
-    //             .home-photo {
-    //                 height: 400px;
-    //             }
-    //         }
-    //     }
-    // }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+
+
+        .content-header {
+            .name {
+                font-size: 4em;
+                padding: 0 1em;
+            }
+
+            .description {
+                font-size: 0.6em;
+                padding: 1em;
+            }
+        }
+
+        .container-description {
+            font-size: 1.2em;
+            padding: 0 1em;
+    
+            .home-tp {
+                width: 60%;
+                margin-top: 2em;
+            }
+        }
+    }
 }

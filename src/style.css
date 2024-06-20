@@ -1,48 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Comforter+Brush&family=Montserrat:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap");
 .container {
-  background-color: #FFE8E1;
+  background-color: #ffebe1;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.container section {
-  margin: 2em 0 2em 0;
+  font-family: "Lato";
+  font-weight: 300;
+  color: #ffebe1;
 }
 .container .content-header {
   text-align: center;
+  margin: 3em auto;
 }
-.container .content-header .title {
-  color: #DA6F4D;
+.container .content-header .name {
+  color: #d95932;
   font-size: 5em;
-  font-family: "Comforter Brush";
-  margin: auto;
-  text-align: center;
+  font-family: "Indie Flower";
 }
 .container .content-header .description {
-  color: #FF9A7A;
+  color: #FFB39B;
+  font-family: "Press Start 2P";
 }
-.container .content-header .nav {
-  width: 100%;
-  height: 2em;
-  background-color: #FFB39B;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
+.container main {
+  background-color: #ffebe1;
 }
-.container .content-header .nav .left-link {
-  font-family: "Comforter";
-  font-size: 1.5em;
-  color: #211b19;
-  text-decoration: none;
-}
-.container .content-header .nav .nav-link:hover,
-.container .content-header .nav .nav-link:focus {
-  transform: translateY(-4px);
-}
-.container .content-header .nav .nav-active {
-  font-weight: bold;
+.container section {
+  padding: 2em 0 2em 0;
 }
 .container .home-cv {
   display: flex;
@@ -52,8 +36,7 @@
   margin-bottom: 2em;
 }
 .container .home-cv .home-photo {
-  height: 200px;
-  width: auto;
+  width: 30%;
   border-radius: 5px;
   margin-bottom: 1em;
 }
@@ -61,17 +44,17 @@
   display: flex;
   align-items: center;
   color: #211b19;
-  background-color: #FF9A7A;
+  background-color: #d95932;
   border-radius: 20px;
   padding: 0.5em;
   text-decoration: none;
-  box-shadow: 0px 0px 0px 2px #FF9A7A;
+  box-shadow: 0px 0px 0px 2px #d95932;
   transition: box-shadow 0.1s linear;
   margin: 0.5em;
   text-align: center;
 }
 .container .home-cv .home-upload:hover {
-  box-shadow: 0px 0px 0px 10px #FFB39B;
+  box-shadow: 0px 0px 0px 10px #f5d5b2;
 }
 .container .container-one {
   background-color: #211b19;
@@ -81,14 +64,17 @@
 }
 .container .title-section {
   font-size: 3em;
-  font-family: "Comforter";
-  color: #FFB39B;
-  padding: 0.8em;
+  font-family: "Indie Flower";
+  color: #d95932;
+  padding-bottom: 0.8em;
 }
 .container .container-description {
-  color: #FFCEBE;
   font-size: 1.2em;
-  padding: 0 1.5em 2em;
+  padding: 0 4em;
+}
+.container .container-description .home-tp {
+  width: 50%;
+  margin-top: 2em;
 }
 .container .container-two {
   background-color: #724d40;
@@ -99,23 +85,6 @@
 .container .container-two .content {
   display: flex;
   flex-direction: column;
-}
-.container .container-two .link-projet {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  color: #211b19;
-  background-color: #FF9A7A;
-  border-radius: 20px;
-  padding: 0.5em;
-  text-decoration: none;
-  box-shadow: 0px 0px 0px 2px #DA6F4D;
-  transition: box-shadow 0.1s linear;
-  margin: 0 auto 2em;
-  text-align: center;
-}
-.container .container-two .link-projet:hover {
-  box-shadow: 0px 0px 0px 10px #DA6F4D;
 }
 .container .container-one-list {
   background-color: #211b19;
@@ -129,20 +98,23 @@
 .container .container-one-list .container-list .container-items {
   margin: 1em 0 1em;
   padding-bottom: 2em;
-  border-top: solid 1px #DA6F4D;
+  border-top: solid 1px #d95932;
 }
 .container .container-one-list .container-list .container-items .title-list {
-  color: #DA6F4D;
+  color: #f5d5b2;
+  font-family: "Press Start 2P";
+  margin: 1em auto;
 }
 .container a {
-  color: #FF9A7A;
+  color: #f5d5b2;
   text-decoration: none;
 }
 .container a:hover {
-  color: #DA6F4D;
+  color: #d95932;
 }
 .container .footer {
-  background-color: #FFE8E1;
+  background-color: #ffebe1;
+  color: black;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -154,6 +126,25 @@
 }
 .container .footer .footer-link {
   color: #211b19;
+}
+
+@media screen and (max-width: 425px) {
+  .container .content-header .name {
+    font-size: 4em;
+    padding: 0 1em;
+  }
+  .container .content-header .description {
+    font-size: 0.6em;
+    padding: 1em;
+  }
+  .container .container-description {
+    font-size: 1.2em;
+    padding: 0 1em;
+  }
+  .container .container-description .home-tp {
+    width: 60%;
+    margin-top: 2em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
