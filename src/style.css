@@ -99,6 +99,7 @@
   margin: 1em 0 1em;
   padding-bottom: 2em;
   border-top: solid 1px #d95932;
+  list-style: none;
 }
 .container .container-one-list .container-list .container-items .title-list {
   color: #f5d5b2;
