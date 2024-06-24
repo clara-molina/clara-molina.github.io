@@ -5,186 +5,299 @@ $nude: #f5d5b2;
 $light-peach: #FFB39B;
 $peach: #FF9A7A;
 $terracota: #d95932;
+$dark-brown: #211b19;
+$soft-brown: #724d40;
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: $white;
+  color: $dark-brown;
+}
 
 .container {
-    background-color: $white;
-    height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .content-header {
+    text-align: center;
+    margin: 3em auto;
+
+    .name {
+      color: $terracota;
+      font-size: 4em;
+      font-family: "Indie Flower", cursive;
+      margin: 0.5em 0;
+    }
+
+    .description {
+      color: $light-peach;
+      font-family: "Press Start 2P", cursive;
+      font-size: 1.2em;
+    }
+  }
+
+  main {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    font-family: "Lato";
-    font-weight: 300;
+    align-items: center;
+    background-color: $white;
+  }
+
+  section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2em;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .home-cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .home-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .home-upload {
+      display: inline-block;
+      color: $dark-brown;
+      background-color: $terracota;
+      border-radius: 20px;
+      padding: 0.8em 1.5em;
+      text-decoration: none;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      margin: 0.5em;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .home-upload:hover {
+      background-color: $dark-brown;
+      color: $white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .container-one, .container-two {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: $white;
+    padding: 2em;
 
-    .content-header {
-        text-align: center;
-        margin: 3em auto;
-
-        .name {
-            color: $terracota;
-            font-size: 5em;
-            font-family: "Indie Flower";
-        }
-
-        .description {
-            color: $light-peach;
-            font-family: "Press Start 2P";
-        }
+    &.container-one {
+      background-color: $dark-brown;
     }
 
-    main {
-        background-color: $white;
-    }
-
-    section {
-        padding: 2em 0 2em 0;
-    }
-
-    .home-cv {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 2em;
-
-        .home-photo {
-            width: 30%;
-            border-radius: 5px;
-            margin-bottom: 1em;
-        }
-
-        .home-upload {
-            display: flex;
-            align-items: center;
-            color: #211b19;
-            background-color: $terracota;
-            border-radius: 20px;
-            padding: 0.5em;
-            text-decoration: none;
-            box-shadow: 0px 0px 0px 2px $terracota;
-            transition: box-shadow 0.1s linear;
-            margin: 0.5em;
-            text-align: center;
-        }
-
-        .home-upload:hover {
-            box-shadow: 0px 0px 0px 10px $nude;
-        }
-    }
-
-    .container-one {
-        background-color: #211b19;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+    &.container-two {
+      background-color: $soft-brown;
     }
 
     .title-section {
-        font-size: 3em;
-        font-family: "Indie Flower";
-        color: $terracota;
-        padding-bottom: 0.8em;
+      font-size: 2.5em;
+      font-family: "Indie Flower", cursive;
+      color: $terracota;
+      margin-bottom: 1em;
     }
 
     .container-description {
-        font-size: 1.2em;
-        padding: 0 4em;
-
-        .home-tp {
-            width: 50%;
-            margin-top: 2em;
-        }
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 800px;
     }
 
-    .container-two {
-        background-color: #724d40;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+    .home-tp {
+      width: 50%;
+      margin-top: 2em;
+    }
+  }
 
-        .content {
-            display: flex;
-            flex-direction: column;
+  .container-one-list {
+    background-color: $dark-brown;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title-section {
+      font-size: 2.5em;
+      font-family: "Indie Flower", cursive;
+      color: $terracota;
+      margin-bottom: 1em;
+    }
+
+    .container-description {
+      font-size: 1.2em;
+      padding: 0 4em;
+      color: $white;
+    }
+
+    .container-list {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+
+      .container-items {
+        margin: 1em 0;
+        padding-bottom: 2em;
+        border-bottom: solid 1px $terracota;
+
+        .title-list {
+          color: $nude;
+          font-family: "Press Start 2P", cursive;
+          margin: 1em auto;
+          font-size: 1.5em;
         }
+      }
+    }
+  }
 
+  a {
+    color: $nude;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $terracota;
+    }
+  }
+
+  .footer {
+    background-color: $white;
+    color: $dark-brown;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5em;
+    width: 100%;
+    border-top: 1px solid $dark-brown;
+
+    .copyright {
+      margin: 0;
+      font-size: 1em;
+    }
+
+    .footer-link {
+      color: $dark-brown;
+      font-weight: bold;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $terracota;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    .content-header {
+      .name {
+        font-size: 3em;
+      }
+
+      .description {
+        font-size: 1em;
+      }
+    }
+
+    section {
+      padding: 1.5em;
+      margin: 1em 0.5em;
+    }
+
+    .container-one, .container-two {
+      .title-section {
+        font-size: 2em;
+      }
+
+      .container-description {
+        font-size: 1em;
+      }
+
+      .home-tp {
+        width: 70%;
+      }
     }
 
     .container-one-list {
-        background-color: #211b19;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+      .title-section {
+        font-size: 2em;
+      }
 
-        .container-list {
-            padding: 0;
+      .container-description {
+        font-size: 1em;
+        padding: 0 2em;
+      }
 
-            .container-items {
-                margin: 1em 0 1em;
-                padding-bottom: 2em;
-                border-top: solid 1px $terracota;
-                list-style: none;
-
-                .title-list {
-                    color: $nude;
-                    font-family: "Press Start 2P";
-                    margin: 1em auto;
-                }
-            }
+      .container-items {
+        .title-list {
+          font-size: 1.2em;
         }
+      }
     }
-
-    a {
-        color: $nude;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: $terracota;
-    }
-
-    .footer {
-        background-color: $white;
-        color: black;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 5em;
-        width: 100%;
-
-        .copyright {
-            margin: 0;
-        }
-
-        .footer-link {
-            color: #211b19;
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .container {
+  .container {
+    .content-header {
+      .name {
+        font-size: 2.5em;
+      }
 
-
-        .content-header {
-            .name {
-                font-size: 4em;
-                padding: 0 1em;
-            }
-
-            .description {
-                font-size: 0.6em;
-                padding: 1em;
-            }
-        }
-
-        .container-description {
-            font-size: 1.2em;
-            padding: 0 1em;
-    
-            .home-tp {
-                width: 60%;
-                margin-top: 2em;
-            }
-        }
+      .description {
+        font-size: 0.8em;
+      }
     }
+
+    section {
+      padding: 1em;
+      margin: 0.5em;
+    }
+
+    .container-one, .container-two {
+      .title-section {
+        font-size: 1.8em;
+      }
+
+      .container-description {
+        font-size: 0.9em;
+      }
+
+      .home-tp {
+        width: 80%;
+      }
+    }
+
+    .container-one-list {
+      .title-section {
+        font-size: 1.8em;
+      }
+
+      .container-description {
+        font-size: 0.9em;
+        padding: 0 1em;
+      }
+
+      .container-items {
+        .title-list {
+          font-size: 1em;
+        }
+      }
+    }
+  }
 }
