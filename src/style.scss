@@ -90,7 +90,8 @@ body {
     }
   }
 
-  .container-one, .container-two {
+  .container-one,
+  .container-two {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -152,17 +153,23 @@ body {
 
       .container-items {
         margin: 1em 0;
-        padding-bottom: 2em;
-        border-bottom: solid 1px $terracota;
 
-        .title-list {
-          color: $nude;
-          font-family: "Press Start 2P", cursive;
-          margin: 1em auto;
-          font-size: 1.5em;
-        }
+        
       }
     }
+  }
+  .title-list {
+    color: $nude;
+    font-family: "Press Start 2P", cursive;
+    margin: 1em auto;
+    font-size: 1.2em;
+    padding-top: 1em;
+    border-top: solid 1px $terracota;
+  }
+  .title-tech {
+    color: $light-peach;
+    margin: 0.5em auto;
+    font-size: 1.2em;
   }
 
   a {
@@ -219,7 +226,8 @@ body {
       margin: 1em 0.5em;
     }
 
-    .container-one, .container-two {
+    .container-one,
+    .container-two {
       .title-section {
         font-size: 2em;
       }
@@ -269,7 +277,8 @@ body {
       margin: 0.5em;
     }
 
-    .container-one, .container-two {
+    .container-one,
+    .container-two {
       .title-section {
         font-size: 1.8em;
       }
